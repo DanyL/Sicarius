@@ -24,7 +24,7 @@
 - (void)_quitAppAtIndex:(unsigned int)arg1 {
 	if (arg1 == 0) {
 		if ([[self applicationList] count] == 1)
-			system("killall -9 SpringBoard backboard");
+			system("killall backboardd");
 		else {
 			for (NSString *appID in [self applicationList]) {
 				if (![appID isEqualToString:@"com.apple.springboard"])
